@@ -21,6 +21,7 @@ PUT my_index
 ````
 ## keyword类型参数
 下面是keyword类型支持的参数：
+
 参数 | 说明 
 ----- | ------ 
 [boost](https://www.elastic.co/guide/en/elasticsearch/reference/current/keyword.html) | Mapping field-level query time boosting. Accepts a floating point number, defaults to 1.0.
