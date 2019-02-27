@@ -1,7 +1,7 @@
 # Keyword类型
 用于索引结构化内容的字段，例如电子邮件地址，主机名，状态代码，邮政编码或标签。 
 
-它们通常用于过滤（查找我所有发布状态的博客帖子），排序和聚合。keyword字段只能按其确切值进行搜索。
+它们通常用于过滤（如查找我所有发布状态的博客帖子），排序和聚合。keyword字段只能按其确切值进行搜索。
 如果你需要全文索引内容像邮件内容或者产品描述，那么你最好使用`text`类型的字段。
 
 下面是一个keyword类型映射的例子：
@@ -32,6 +32,9 @@ PUT my_index
 [index_options](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-options.html)|出于评分目的，应将哪些信息存储在索引中. 默认为`docs`，但也可以设置为`freqs`，以便在计算分数时考虑术语频率。
 [norms](https://www.elastic.co/guide/en/elasticsearch/reference/current/norms.html)|在评分查询时是否应考虑字段长度。接受值为`true`和`false`（默认）。
 [null_value](https://www.elastic.co/guide/en/elasticsearch/reference/current/null-value.html)|设置一个字符串值来代替`null`值。默认值为`null`,意味着该字段被视为缺失。
+[store](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-store.html)|字段值是否应与_source字段分开存储和检索。接受值为`true`和`false`（默认）。
 [similarity](https://www.elastic.co/guide/en/elasticsearch/reference/current/similarity.html)|应使用哪种评分算法或相似度。默认为`BM25`。
+[normalizer](https://www.elastic.co/guide/en/elasticsearch/reference/current/normalizer.html)|如何在编制索引之前预处理关键字？默认值为`null`, 意思是关键字被原样保留。
+split_queries_on_whitespace|在这个字段上查询时，全文查询是否对输入内容在空白字符上拆分。接受值为`true`和`false`（默认）。
 
 
