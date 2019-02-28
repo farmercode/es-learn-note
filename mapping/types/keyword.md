@@ -21,8 +21,9 @@ PUT my_index
 ````
 ## keyword类型参数
 下面是keyword类型支持的参数：
-参数 | 说明
---- | ----
+
+参数 | 说明 
+----- | ------ 
 [boost](https://www.elastic.co/guide/en/elasticsearch/reference/current/keyword.html) | Mapping field-level query time boosting. Accepts a floating point number, defaults to 1.0.
 [doc_values](https://www.elastic.co/guide/en/elasticsearch/reference/current/doc-values.html) | 字段是否应该以[column-stride](https://discuss.elastic.co/t/what-does-column-stride-field-mean-regarding-doc-values-in-elasticsearch-lecune/111332)方式存储在磁盘上，以便后续用来排序，聚合或者脚本？接受`true`（默认）或者`false`值。
 [eager_global_ordinals](https://www.elastic.co/guide/en/elasticsearch/reference/current/eager-global-ordinals.html)|Should global ordinals be loaded eagerly on refresh? 接受 值`true` 和 `false` (默认). 建议在频繁的使用terms聚合的字段上面启用。
